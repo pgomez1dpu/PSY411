@@ -27,7 +27,7 @@
 #   There is a discussion of the #law of large numbers# in every statistics textbook. 
 
 # The  R code below demonstrates this question via a monte carlo simulation
-
+``` r
 #SET N
 
 #number of births per day in Large Hospital
@@ -57,7 +57,7 @@ plot(table(q2.p1)/10000,xlab="prop boys Large Hosp",lwd=3, col="red",type="h")
 screen(2)
 plot(table(q2.p2)/10000,xlab="prop boys Tiny Clinic",lwd=3, col="blue",type="h")
 close.screen()
-
+```
 ######################################################################################
 ######################################################################################
 
