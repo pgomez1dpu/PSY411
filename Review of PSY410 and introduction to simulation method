@@ -1,0 +1,69 @@
+
+######################################################################################
+######################################################################################
+
+# Q1 In the city of Metropolough mothers give birth in two hospitals:
+#    ``Large hospital", where about 20 births occur per day, and ``tiny
+#     clinic", where  about 5 births occur per day.  Assume that the probability 
+#     of a baby being  boy is .5.  
+#     Which one of the two hospitals is more likely to have 80% of births being boys in one day:
+
+#### A ####  Large hospital
+#### B ####  Tiny clinic
+#### C #### Both equally
+#### D ####  Very unlikely in both
+#### E ####  Impossible to know
+
+
+
+#    This question deals with \emph{the law of large numbers}. In essence, the larger 
+#  the sample size the more probable the sample will reflect the true proportion of boys and girls.  
+#  Hence, ``Large Hospital" is unlikely to have too many of either boys or girls.
+
+#    Let's consider an exaggerated example:  If you toss a coin 4 times, there is a .25 chance 
+#  that you will get 3 heads (75\% of tosses  are heads).  But if you toss a coin 1 million times, 
+#  there is no chance that  75\% of those one million tosses will be heads.
+
+#   There is a discussion of the #law of large numbers# in every statistics textbook. 
+
+# The  R code below demonstrates this question via a monte carlo simulation
+
+#SET N
+
+#number of births per day in Large Hospital
+n1 <- 20
+#number of births per day in Tiny Hospital
+n2 <- 5
+
+
+q2.p1 <-array(dim=10000)
+q2.p2 <-array(dim=10000)
+
+# lets simulate 10,000 days
+q2.p1 <-array(dim=10000)
+q2.p2 <-array(dim=10000)
+
+for(i in 1:10000){
+  # 0:girl 1:boy
+  q2.p1[i] <- sum(sample(c(0,1),n1, replace =T))/n1
+  q2.p2[i] <- sum(sample(c(0,1),n2, replace =T))/n2
+}
+
+# red for large hospital
+# blue for tiny clinic
+split.screen(c(2,1))
+screen(1)
+plot(table(q2.p1)/10000,xlab="prop boys Large Hosp",lwd=3, col="red",type="h")
+screen(2)
+plot(table(q2.p2)/10000,xlab="prop boys Tiny Clinic",lwd=3, col="blue",type="h")
+close.screen()
+
+######################################################################################
+######################################################################################
+
+
+
+
+
+
+
