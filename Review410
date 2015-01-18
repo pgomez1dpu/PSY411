@@ -27,7 +27,7 @@
 #   There is a discussion of the #law of large numbers# in every statistics textbook. 
 
 # The  R code below demonstrates this question via a monte carlo simulation
-``` r
+``` R
 #SET N
 
 #number of births per day in Large Hospital
