@@ -1,34 +1,22 @@
+# Q1 <h1>
 
-######################################################################################
-######################################################################################
+In the city of Metropolough mothers give birth in two hospitals: ``Large hospital", where about 20 births occur per day, and ``tiny clinic", where  about 5 births occur per day.  Assume that the probability of a baby being  boy is .5.  
+Which one of the two hospitals is more likely to have 80% of births being boys in one day:
 
-# Q1 In the city of Metropolough mothers give birth in two hospitals:
-#    ``Large hospital", where about 20 births occur per day, and ``tiny
-#     clinic", where  about 5 births occur per day.  Assume that the probability 
-#     of a baby being  boy is .5.  
-#     Which one of the two hospitals is more likely to have 80% of births being boys in one day:
-
-#### A ####  Large hospital
-#### B ####  Tiny clinic
-#### C #### Both equally
-#### D ####  Very unlikely in both
-#### E ####  Impossible to know
+*A* Large hospital
+*B* Tiny clinic
+*C* Both equally
+*D* Very unlikely in both
+*E* Impossible to know
 
 
+This question deals with **the law of large numbers**. In essence, the larger the sample size the more probable the sample will reflect the true proportion of boys and girls. Hence, *Large Hospital* is unlikely to have too many of either boys or girls.
 
-#    This question deals with \emph{the law of large numbers}. In essence, the larger 
-#  the sample size the more probable the sample will reflect the true proportion of boys and girls.  
-#  Hence, ``Large Hospital" is unlikely to have too many of either boys or girls.
+Let's consider an exaggerated example:  If you toss a coin 4 times, there is a .25 chance that you will get 3 heads (75% of tosses  are heads).  But if you toss a coin 1 million times, there is no chance that  75\% of those one million tosses will be heads.
 
-#    Let's consider an exaggerated example:  If you toss a coin 4 times, there is a .25 chance 
-#  that you will get 3 heads (75\% of tosses  are heads).  But if you toss a coin 1 million times, 
-#  there is no chance that  75\% of those one million tosses will be heads.
+There is a discussion of the *law of large numbers* in every statistics textbook. 
 
-#   There is a discussion of the #law of large numbers# in every statistics textbook. 
-
-# The  R code below demonstrates this question via a monte carlo simulation
-
-```R
+```
 #SET N
 
 #number of births per day in Large Hospital
